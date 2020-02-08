@@ -1,0 +1,272 @@
+// Detail hero section
+.detailhero {
+  &__background {
+    background-image: url(/images/recipes/single-big.jpg);
+    background-size: cover;
+    background-position: top center;
+    width: 100%;
+    height: 767px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+
+    text-align: center;
+  }
+}
+
+// Recipe detail section css
+
+.recipe-detail {
+  &__meta {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    padding-top: 64px;
+    padding-bottom: 70px;
+    & > h2 {
+      font-weight: 600;
+      font-size: 36px;
+      color: #474747;
+      line-height: 1.2;
+      text-align: left;
+    }
+  }
+
+  &__beginner {
+    display: inline-block;
+    background: #ff2a6b;
+    color: #fff;
+    font-size: 16px;
+    padding: 14px 20px 12px 30px;
+    position: relative;
+    margin-bottom: 10px;
+  }
+
+  &__date {
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    color: #a4a4a4;
+    margin-bottom: 30px;
+  }
+  &__rating {
+    margin-bottom: 55px;
+    font-family: "Poppins", sans-serif;
+  }
+  .recipe__rating > li > i {
+    margin-right: 2px;
+    color: #fbb710;
+    display: inline-block;
+    font-size: inherit;
+    text-rendering: auto;
+  }
+
+  // ROW content
+  &__row {
+    display: flex;
+    flex-flow: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+
+  &__filter-warp {
+    background: #eff3f7;
+  }
+
+  &__filter-top {
+    padding-right: 110px;
+    overflow: hidden;
+  }
+
+  &__filter-top-text {
+    background: #ff2a6b;
+    padding: 22px 50px;
+    position: relative;
+    & > p {
+      margin-bottom: 0;
+      color: #fff;
+      font-size: 15px;
+      position: relative;
+      line-height: 2.1;
+    }
+  }
+
+  // Row form content
+  &__filter-form-content {
+    padding: 55px;
+    padding-right: 30px;
+
+    & > h2 {
+      font-weight: 600;
+      margin-bottom: 35px;
+      margin: 0;
+      color: #474747;
+      font-size: 36px;
+    }
+  }
+  &__filter-form {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+  }
+  &__check-warp {
+    display: block;
+    margin-bottom: 25px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+
+    // Hide default checkbox (Ẩn check box)
+    & > input[type="checkbox"] {
+      width: 0;
+      opacity: 0;
+    }
+
+    // CHECKED STATE SWITCHER
+    // tìm đến thằng checkbox khi check thì tìm label phía sau với hiệu ứng:
+    & > input[type="checkbox"]:checked + label::before {
+      background-color: deeppink;
+    }
+
+    & > input[type="checkbox"]:checked + label::after {
+      content: "";
+      border-color: white;
+    }
+
+    & > label {
+      position: relative;
+
+      display: inline-block;
+      width: auto;
+      padding: 0 0 0 2rem;
+
+      cursor: pointer;
+
+      // before, after chỉ hiển thị khi có content
+      &::before {
+        content: "";
+        // hiển thị ô vuông
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        display: inline-block;
+        width: 1rem;
+        height: 1rem;
+        border: 1px solid deeppink;
+        border-radius: 4px;
+      }
+
+      &::after {
+        // tạo dấu check và ẩn đi
+        // content: ""; không show dấu check
+        position: absolute;
+        top: 2px;
+        left: 6px;
+
+        display: inline-block;
+        width: 4px;
+        height: 8px;
+
+        border-right: 2px solid black;
+        border-bottom: 2px solid black;
+
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  // FOrm check css
+
+  //   // CUSTOM CHECKBOX
+  //   .form-check {
+  //     label {
+  //       position: relative;
+
+  //       display: inline-block;
+  //       width: auto;
+  //       padding: 0 0 0 2rem;
+
+  //       cursor: pointer;
+
+  //       // before, after chỉ hiển thị khi có content
+  //       &::before {
+  //         content: "";
+  //         // hiển thị ô vuông
+  //         position: absolute;
+  //         top: 0;
+  //         left: 0;
+
+  //         display: inline-block;
+  //         width: 1rem;
+  //         height: 1rem;
+  //         border: 1px solid deeppink;
+  //         border-radius: 4px;
+  //       }
+
+  //       &::after {
+  //         // tạo dấu check và ẩn đi
+  //         // content: ""; không show dấu check
+  //         position: absolute;
+  //         top: 2px;
+  //         left: 6px;
+
+  //         display: inline-block;
+  //         width: 4px;
+  //         height: 8px;
+
+  //         border-right: 2px solid black;
+  //         border-bottom: 2px solid black;
+
+  //         transform: rotate(45deg);
+  //       }
+  //     }
+
+  //     // Hide default checkbox (Ẩn check box)
+  //     input[type="checkbox"] {
+  //       width: 0;
+  //       opacity: 0;
+  //     }
+
+  //     // CHECKED STATE SWITCHER
+  //     // tìm đến thằng checkbox khi check thì tìm label phía sau với hiệu ứng:
+  //     input[type="checkbox"]:checked + label::before {
+  //       background-color: deeppink;
+  //     }
+
+  //     input[type="checkbox"]:checked + label::after {
+  //       content: "";
+  //       border-color: white;
+  //     }
+  //   }
+
+  //   // Info list
+  &__info-list {
+    list-style: none;
+    padding-left: 17px;
+    & > li {
+      margin-bottom: 50px;
+      & > h2 {
+        float: left;
+        font-weight: 600;
+        min-width: 60px;
+        color: #474747;
+        font-size: 36px;
+      }
+      & > p {
+        padding-left: 70px;
+        margin-bottom: 0;
+        padding-top: 13px;
+        font-size: 14px;
+        color: #838383;
+        line-height: 2.1;
+      }
+    }
+  }
+}

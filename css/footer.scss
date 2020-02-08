@@ -1,0 +1,78 @@
+.app-footer {
+  padding: 30px;
+  background-image: url(/images/footer-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  &__row {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    & > img {
+      vertical-align: middle;
+      align-self: center;
+    }
+  }
+
+  &__row-container {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    widows: 100%;
+  }
+
+  &__row-logowrapper {
+    width: 100%;
+    
+    text-align: center;
+    @media only screen and (min-width: 992px) {
+      width: 40%;
+    }
+  }
+  &__wrapper {
+    width: 100%;
+    @media only screen and (min-width: 992px) {
+      width: 60%;
+    }
+  }
+
+  &__menu {
+    width: 100%;
+    // Destop
+    @media only screen and (min-width: 992px) {
+      width: 100%;
+    }
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  &__menu > li > a {
+    padding: 8px;
+    text-decoration: none;
+    color: grey;
+  }
+
+  &__menu > li > a:hover {
+    color: deeppink;
+    cursor: pointer;
+  }
+
+  &__menu-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  &__icon-list {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__icon-list > li {
+    padding: 8px;
+  }
+}

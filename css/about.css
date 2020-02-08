@@ -1,0 +1,131 @@
+.hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 230px;
+  background-image: url(../images/page-top-bg.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+
+.hero__title {
+  display: inline-block;
+  padding: 30px 16px;
+  border-radius: 4px;
+  margin: 68px 0;
+  color: white;
+  background-color: deeppink;
+  font-size: 72px;
+  line-height: 40px;
+  font-weight: 700;
+  -webkit-transition: all .35s ease-in-out 0s;
+  transition: all .35s ease-in-out 0s;
+}
+
+.hero__title--active {
+  color: deeppink;
+}
+
+.hero__title:hover {
+  color: black;
+  cursor: pointer;
+}
+
+.about__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  vertical-align: center;
+  margin: 0 -16px;
+  padding: 30px 0 30px 0;
+}
+
+.about__row > div {
+  width: 50%;
+  padding: 16px;
+}
+
+.about__title {
+  font-weight: bold;
+  padding: 40px;
+}
+
+.about__description {
+  color: darkgrey;
+  font-weight: lighter;
+  font-size: 16px;
+  line-height: 25px;
+  padding: 15px;
+}
+
+.about__read-more {
+  background: deeppink;
+  display: inline-block;
+  padding: 20px 35px 20px 35px;
+  color: white;
+}
+
+.about__image {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.facts {
+  padding: 50 px;
+}
+
+.facts__wrap {
+  padding: 115px;
+  background-color: #eff3f7;
+  width: 100%;
+}
+
+.facts__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.facts__item {
+  width: 25%;
+}
+
+.facts__item-number {
+  font-weight: bold;
+  font-size: 50px;
+  color: dimgray;
+}
+
+.facts__item-name {
+  display: block;
+  font-weight: lighter;
+}
+/*# sourceMappingURL=about.css.map */

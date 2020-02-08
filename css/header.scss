@@ -1,0 +1,138 @@
+// TOPBAR
+* {
+  font-family: "Poppins", sans-serif;
+}
+.top-bar {
+  padding: 8px 0;
+  color: #fff;
+  background-color: deeppink;
+
+  &__row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__icon-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    position: relative;
+  }
+
+  &__icon-list > li {
+    margin-right: 30px;
+  }
+
+  &__icon-list > li > a {
+    color: white;
+  }
+
+  &__link-wrapper {
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+
+    & > a {
+      text-decoration: none;
+      color: white;
+    }
+  }
+}
+// TOPBAR end from here
+
+// TOPNAV
+.top-nav {
+  background-color: white;
+  color: black;
+  padding: 8px 0;
+
+  &__row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+  // Responsive menu for mobile and tablet
+  &__menu-wrapper > ul {
+    display: none;
+    // For destop
+    @media only screen and (min-width: 992px) {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__menu-wrapper > ul > li {
+    padding: 23px;
+    font-weight: bold;
+  }
+
+  &__menu-wrapper > ul > li > a {
+    text-decoration: none;
+    color: grey;
+  }
+  &__menu-wrapper > ul > li > a:hover {
+    color: deeppink;
+    cursor: pointer;
+  }
+
+  &__search {
+    background: deeppink;
+    border-radius: 4px;
+    padding: 10px;
+  }
+  &__search > a > i {
+    color: white;
+  }
+  &__logo-wrapper {
+    width: 30%;
+  }
+
+  &__switch {
+    & button > i {
+      display: block;
+      float: right;
+      width: 38px;
+      height: 38px;
+      border: 1px solid #ddd;
+      text-align: center;
+      font-size: 24px;
+    }
+
+    // Destop
+    @media only screen and (min-width: 992px) {
+      display: none;
+    }
+  }
+  &__switch:hover + .top-nav__switch-content {
+    display: block;
+  }
+}
+.top-nav__switch-content {
+  display: none;
+}
+
+.top-nav__switch:hover + .top-nav__switch-content {
+  display: block;
+  position: absolute;
+  background-color: whitesmoke;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  & > ul > li > a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    margin-left: 0;
+    padding: 13px 20px;
+    border-top: 1px solid #ededed;
+  }
+}

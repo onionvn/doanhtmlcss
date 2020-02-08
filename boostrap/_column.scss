@@ -1,0 +1,56 @@
+// Tat ca class co chu col- deu ap dung css nay
+[class*="col-"] {
+  flex: 0 0 auto;
+  padding: 16px;
+}
+//
+
+// Extra small
+// .col-1 {width: calc(100%/12*1) };}
+// .col-2 {width: calc(100%/12*2) };}
+// .col-3 {width: calc(100%/12*3) };}
+
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    width: calc(100% / 12 * #{$i});
+  }
+}
+
+// Small
+@media only screen and (min-width: 576px) {
+  @for $i from 1 through 12 {
+    .col-sm-#{$i} {
+      width: calc(100% / 12 * #{$i});
+    }
+  }
+}
+
+// Medium: tablet
+
+@media only screen and (min-width: 768px) {
+  @for $i from 1 through 12 {
+    .col-md-#{$i} {
+      width: calc(100% / 12 * #{$i});
+    }
+  }
+}
+
+// Large: Laptop
+
+@media only screen and (min-width: 992px) {
+  @for $i from 1 through 12 {
+    .col-lg-#{$i} {
+      width: calc(100% / 12 * #{$i});
+    }
+  }
+}
+
+// Extra large:destop
+
+@media only screen and (min-width: 1200px) {
+  @for $i from 1 through 12 {
+    .col-xl-#{$i} {
+      width: calc(100% / 12 * #{$i});
+    }
+  }
+}

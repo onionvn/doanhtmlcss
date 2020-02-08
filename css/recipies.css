@@ -1,0 +1,141 @@
+* {
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
+.section-title {
+  position: relative;
+  font-size: 20px;
+  font-weight: bold;
+  display: block;
+  padding: 15px 0 15px 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.section-title::after {
+  position: absolute;
+  content: "";
+  width: 70px;
+  height: 5px;
+  left: 10px;
+  top: 0;
+  background: #ff2a6b;
+}
+
+.recipe__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style-type: none;
+  margin: -32px;
+}
+
+.recipe__list-itembox {
+  position: relative;
+}
+
+.recipe__row > li {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 100%;
+  padding: 8px;
+}
+
+@media only screen and (min-width: 768px) {
+  .recipe__row > li {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .recipe__row > li {
+    width: 33.3333%;
+  }
+}
+
+.recipe__list-itembox > img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+.recipe__details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: deeppink;
+  padding: 8px 32px;
+}
+
+.recipe__name {
+  color: white;
+}
+
+.recipe__rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  list-style-type: none;
+}
+
+.recipe__rating > li {
+  color: white;
+}
+
+.recipe__rating > li.active {
+  color: yellow;
+}
+
+.recipe__rating > li > i {
+  font-size: 10px;
+}
+
+.recipe__name {
+  color: white;
+}
+
+.pagedisplay {
+  padding-top: 70px;
+  margin: 10px;
+  padding-bottom: 70px;
+}
+
+.pagedisplay__number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style-type: none;
+}
+
+.pagedisplay__number > li {
+  padding: 12px;
+  background-color: deeppink;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+.pagedisplay__number > li > a {
+  font-size: 20px;
+  font-weight: 900;
+  color: white;
+}
+/*# sourceMappingURL=recipies.css.map */

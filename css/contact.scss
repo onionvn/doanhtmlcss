@@ -1,0 +1,141 @@
+.contact {
+  padding-top: 96px;
+  padding-bottom: 96px;
+  display: block;
+  &__row {
+    display: flex;
+    flex-flow: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+  &__form-warp {
+    & > h4 {
+      font-weight: 600;
+      margin-bottom: 75px;
+      font-size: 24px;
+      margin: 0;
+      color: #474747;
+    }
+    & > form {
+      background-color: #fff;
+    }
+  }
+  &__form-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    height: 53px;
+    border: none;
+    background: #eff3f7;
+
+    font-size: 14px;
+    padding: 0 30px;
+    margin-bottom: 25px;
+  }
+
+  textarea {
+    height: 232px;
+    padding: 30px;
+    width: 100%;
+
+    border: none;
+    background: #eff3f7;
+    font-size: 14px;
+    padding: 0 30px;
+    margin-bottom: 25px;
+
+    overflow: auto;
+    resize: vertical;
+  }
+  &__button-send {
+    display: inline-block;
+    min-width: 178px;
+    text-align: center;
+    border: none;
+    padding: 18px 5px;
+    font-weight: 400;
+    font-size: 14px;
+    position: relative;
+    color: #fff;
+    cursor: pointer;
+    background: #ff2a6b;
+  }
+
+  //  Right collumn
+  &__logo {
+    margin-bottom: 40px;
+    display: block;
+    & > img {
+      max-width: 100%;
+      vertical-align: middle;
+      border-style: none;
+    }
+  }
+
+  &__info {
+    padding-left: 95px;
+    display: block;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+  }
+  &__list {
+    list-style: none;
+    display: block;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+  }
+  &__list > li {
+    margin-bottom: 25px;
+    display: list-item;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    float: left;
+    margin-right: 50px;
+
+    // Responsive
+
+    @media only screen and (min-width: 991px) {
+      float: none;
+      margin-right: 50px;
+    }
+
+    & > h6 {
+      display: inline-block;
+      color: #ff2a6b;
+      padding-bottom: 1px;
+      border-bottom: 1px solid #ff2a6b;
+      margin-bottom: 5px;
+      font-size: 16px;
+    }
+    & > p {
+      font-size: 14.1px;
+      line-height: 2.1;
+      margin-bottom: 0;
+      font-weight: 500;
+    }
+  }
+
+  &__social {
+    padding-top: 30px;
+    display: inline-block;
+    width: 100%;
+    & > a {
+      color: #474747;
+      margin-right: 30px;
+    }
+  }
+}
